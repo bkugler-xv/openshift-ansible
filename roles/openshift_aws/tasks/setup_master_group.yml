@@ -9,6 +9,8 @@
 
 - name: fetch newly created instances
   ec2_instance_facts:
+#    aws_access_key: "{{ openshift_cloudprovider_aws_access_key }}"
+#    aws_secret_key: "{{ openshift_cloudprovider_aws_secret_key }}"
     region: "{{ openshift_aws_region }}"
     filters:
       "tag:clusterid": "{{ openshift_aws_clusterid }}"
